@@ -1,56 +1,82 @@
-import React from 'react';
-import { FaStar, FaMoneyBillWave, FaRocket } from 'react-icons/fa';
-const SectionV2 = () => {
-    return (
-    <section className="bg-gray-50 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Trusted by Clients & Freelancers Worldwide
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Freelancers Card */}
-          <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-            <div className="text-5xl text-blue-600 mb-4 flex justify-center">
-              <FaStar />
-            </div>
-            <h3 className="text-4xl font-bold mb-2">3M+</h3>
-            <p className="text-gray-600 mb-2">Rated Freelancers</p>
-            <p className="text-sm text-gray-500">
-              Covering <span className="font-semibold">8,766 skills</span> from coding to creative design
-            </p>
-          </div>
+// import { FaStar, FaMoneyBillWave, FaRocket, FaUsers, FaGlobe, FaBriefcase } from 'react-icons/fa';
 
-          {/* Earnings Card */}
-          <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-            <div className="text-5xl text-green-600 mb-4 flex justify-center">
-              <FaMoneyBillWave />
-            </div>
-            <h3 className="text-4xl font-bold mb-2">$150M+</h3>
-            <p className="text-gray-600 mb-2">Freelancer Earnings</p>
-            <p className="text-sm text-gray-500">
-              Top performers earn <span className="font-semibold">$7,000+/month</span>
-            </p>
-          </div>
+function TrustedSection() {
+  return (
+    <>
 
-          {/* Speed Card */}
-          <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-            <div className="text-5xl text-purple-600 mb-4 flex justify-center">
-              <FaRocket />
-            </div>
-            <h3 className="text-4xl font-bold mb-2">10 mins</h3>
-            <p className="text-gray-600 mb-2">Average Hiring Time</p>
-            <p className="text-sm text-gray-500">
-              <span className="font-semibold">90% of projects</span> completed within 7 days
-            </p>
-          </div>
-        </div>
+ <section className=" py-8 px-6">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-12">Platform Statistics</h2>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="bg-white border border-gray-200 p-6 rounded-lg text-center">
+        <h3 className="text-2xl font-bold text-blue-600">3M+</h3>
+        <p className="text-gray-600">Rated Freelancers</p>
       </div>
-    </section>
+      <div className="bg-white border border-gray-200 p-6 rounded-lg text-center">
+        <h3 className="text-2xl font-bold text-green-600">$150M+</h3>
+        <p className="text-gray-600">Freelancer Earnings</p>
+      </div>
+      <div className="bg-white border border-gray-200 p-6 rounded-lg text-center">
+        <h3 className="text-2xl font-bold text-purple-600">10 mins</h3>
+        <p className="text-gray-600">Average Hiring Time</p>
+      </div>
+      <div className="bg-white border border-gray-200 p-6 rounded-lg text-center">
+        <h3 className="text-2xl font-bold text-indigo-600">120+</h3>
+        <p className="text-gray-600">Countries Served</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{/*  */}
+ <section className="bg-white py-5 w-9/12 mx-auto">
+  <h2 className="text-2xl font-bold text-center mb-6">🛠 How It Works</h2>
+  <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    <div className="text-center">
+      <div className="text-4xl mb-2">📝</div>
+      <h3 className="font-semibold text-lg">Post a Task</h3>
+      <p className="text-sm text-gray-600">
+        Describe your need and set a budget. Provide clear details to help freelancers understand your requirements.
+      </p>
+    </div>
+    <div className="text-center">
+      <div className="text-4xl mb-2">📬</div>
+      <h3 className="font-semibold text-lg">Get Bids</h3>
+      <p className="text-sm text-gray-600">
+        Freelancers send offers based on your task. Review proposals, compare expertise, and ask questions before making a decision.
+      </p>
+    </div>
+    <div className="text-center">
+      <div className="text-4xl mb-2">💼</div>
+      <h3 className="font-semibold text-lg">Hire & Work</h3>
+      <p className="text-sm text-gray-600">
+        Choose the best freelancer and collaborate easily. Monitor progress, communicate effectively, and ensure timely delivery.
+      </p>
+    </div>
+  </div>
+</section>
+{/*  */}
+   
+
+
+
+
+
+
+
+
+
+
+</>
+
+
+
+
+
   );
-};
+}
 
-export default SectionV2;
-
-
-
+export default TrustedSection;

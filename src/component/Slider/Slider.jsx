@@ -63,7 +63,7 @@ const Slider = () => {
 
           <div className="z-10 relative container mx-auto px-6 sm:px-8 lg:px-12 py-8 sm:py-12">
             <div className="max-w-xl">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
                 <Typewriter
                   words={descriptionArray}
                   loop={true}

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../assets/logos.png"
+import logo from "../../assets/Image [h-8].png"
 import { Link } from 'react-router';
 const Footer = () => {
     return (
@@ -7,7 +7,7 @@ const Footer = () => {
          <footer className="px-4 py-8 border-t border-t-gray-200 dark:text-gray-600 mt-2">
 	<div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
 		<div className="flex flex-row pr-3 space-x-4 sm:space-x-8 items-center">
-				<Link >  <img   className='w-30 h-12 ' src={logo} alt="" /> </Link>
+				<Link >  <img   className='w-30 h-12 dark:bg-white' src={logo} alt="" /> </Link>
 			<ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">
 				<li>
 				<Link>Terms & Conditions</Link>

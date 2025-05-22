@@ -1,12 +1,17 @@
 
-import React, { useContext } from 'react';
+import React, { useContext} from 'react';
 import { NavLink } from 'react-router';
-import logo from "../../assets/logos.png"
+import logo from "../../assets/Image [h-8].png"
 import { Link } from 'react-router';
+
 import { AuthContext } from '../context/AuthContext/AuthContext';
+import Theme from '../theme/Theme';
 const Header = () => {
  const {user,logout}=useContext(AuthContext)
 //console.log(user);
+
+
+  
 
   const link=  <>
   <li className='list-none mx-1'><NavLink 
@@ -22,6 +27,8 @@ const Header = () => {
     isActive ? 'border-b-2 border-gray-950 list-none p-1' : 'p-1'
   } to="/addTask">AddTask
 </NavLink></li>
+
+<li> <Theme></Theme></li>
   </>
 const handlerSigOut=()=>{
 logout().then(() => {
@@ -32,7 +39,7 @@ logout().then(() => {
 }
 
     return (   
-      <div className="navbar bg-base-100 shadow-sm px-6 py-4 text-xl">
+      <div className="navbar bg-base-100 shadow-sm px-6 py-4 text-base">
       <div className="navbar-start">
       <li className=' list-none lg:flex max-sm:hidden  font-bold'><img  className='w-40 bg-center bg-cover' src={logo} alt='' /></li>
         <div className=" lg:hidden  md:hidden dropdown">
@@ -77,14 +84,10 @@ logout().then(() => {
 )}
 
 
-
-
-
-
-    {user? <button onClick={handlerSigOut} className="btn bg-green-500 text-xl  text-white ">  Log out </button>: 
-        <button className="btn bg-green-500  text-white text-xl "><Link to="/login">Login</Link>      </button>}
+    {user? <button onClick={handlerSigOut} className="btn bg-green-500 text-base  text-white ">  Log out </button>: 
+        <button className="btn bg-green-500  text-white text-base "><Link to="/login">Login</Link>      </button>}
      
-     {user? "" :<Link to="/signup"><button className="btn bg-green-500  text-xl text-white ">Signup</button> </Link>  }
+     {user? "" :<Link to="/signup"><button className="btn bg-green-500  text-base text-white ">Signup</button> </Link>  }
 
       </div>
     </div>
