@@ -15,13 +15,13 @@ useEffect(() => {
   fetch(`https://assignment-10-server-side-blond.vercel.app/tasks?emailParams=${user.email}`)
     .then((result) => result.json())
     .then((data) => {
-      console.log(data);
+    //  console.log(data);
       setUser(data);
    
 
     })
-    .catch((err) => {
-      console.error("Error fetching user tasks:", err);
+    .catch(() => {
+    //  console.error("Error fetching user tasks:", err);
     });
 }, [user?.email]);
 
@@ -45,7 +45,7 @@ Swal.fire({
  }).then((result)=>result.json()).
         then(data=>{
          
-            console.log(data);
+          console.log(data);
 const remaining=newUser.filter(use=> use._id!==id);
 setUser(remaining)
 console.log(id);

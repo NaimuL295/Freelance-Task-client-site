@@ -7,22 +7,16 @@ import { AuthContext } from '../../context/AuthContext/AuthContext';
 
   
 const Signup = () => {
-const {createUser,signGoogle,updataUser ,setUser}=use(AuthContext)
+const {createUser,signGoogle,updateUser ,setUser}=use(AuthContext)
   const navigate=useNavigate()
     const handlerSignup=(e)=>{
         e.preventDefault();
         const form=e.target;
         const  fromData=new FormData(form);
-    const {photo,name,email,password}=Object.fromEntries(fromData.entries())
+    const {name,email,password,photo}=Object.fromEntries(fromData.entries())
 
-console.log(password,email,name,photo);
+//console.log(password,email,name,photo);
 
-
-// const  passwordRez =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/
-// if (!passwordRez.test(password)) {
-//   return  toast.error("Password must include at least: one number (0-6), one lowercase letter (a-z), one uppercase letter (A-Z), and be at least 6 characters long.");
-
-// }
 if (!name) {
 			toast.error("Enter Your Name")
 			return
@@ -57,18 +51,18 @@ if (!name) {
  createUser(email,password).
 	then(res=>{
     
-		const user=res.user;
-		updataUser({ displayName:name,photoURL:photo}).then(() => {
+		const user=res.user
+		updateUser({  displayName:name,photoURL:photo}).then(() => {
 		   setUser({...user,displayName:name,photoURL:photo})
 		
 		}).catch((error) => {
 		  console.log(error);
-		 //  setUser(user)
+		   setUser(user)
 		})
 	  })
-
+	//   .catch((err) => {console.log(err);});
 	 
-	toast.success("Sign up successful")
+	toast.success("Register successful")
 	 navigate("/")
 	}
     

@@ -1,8 +1,7 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider,
-     onAuthStateChanged,
-     signInWithEmailAndPassword, signInWithPopup, signOut, 
-     updateProfile} from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { createUserWithEmailAndPassword, GoogleAuthProvider,
+     onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut,  updateProfile} from 'firebase/auth';
+
 import { auth } from '../Auth/Firebase';
 import { AuthContext } from '../AuthContext/AuthContext';
 
@@ -35,9 +34,9 @@ useEffect(()=>{
     unSubscribe()
 }
 },[])
-const updataUser=(updata)=>{
-return   updateProfile(auth.currentUser,updata)
-}
+const updateUser=(updata)=>{
+    return  updateProfile(auth.currentUser,updata)
+  }
 
     const UserInfo={
 createUser,
@@ -46,7 +45,7 @@ logout,
 signGoogle,
 user,
 Loading,
-updataUser
+updateUser
     }
     return (
      <AuthContext value={UserInfo}>

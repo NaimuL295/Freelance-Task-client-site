@@ -21,7 +21,7 @@ const {user}=use(AuthContext)
  const day= startDate.toISOString().split('T')[0]
  const userData={...formDataObj,day,
   bidsCount}
-console.log('Updated formObject:', userData);
+//console.log('Updated formObject:', userData);
 
 if (!userData) {
    return toast.error("Enter Details")
@@ -32,8 +32,8 @@ fetch("https://assignment-10-server-side-blond.vercel.app/task",{
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(userData)
-}).then((result) =>result.json()).then((data) => {
-  console.log(data);
+}).then((result) =>result.json()).then(() => {
+ 
 Swal.fire({
   title: "Add task  successfully",
   icon: "success",

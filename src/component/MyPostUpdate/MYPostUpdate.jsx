@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import { useLoaderData } from 'react-router';
 
 
@@ -21,7 +20,7 @@ console.log(data)
   const  formDataObj= Object.fromEntries(formData.entries());
  const day= startDate.toISOString().split('T')[0]
  const userData={...formDataObj,day}
-console.log('Updated formObject:', userData);
+//console.log('Updated formObject:', userData);
 
 fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
    method: 'PUT',

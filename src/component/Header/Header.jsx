@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import { AuthContext } from '../context/AuthContext/AuthContext';
 const Header = () => {
  const {user,logout}=useContext(AuthContext)
-console.log(user);
+//console.log(user);
 
   const link=  <>
   <li className='list-none mx-1'><NavLink 
@@ -24,12 +24,11 @@ console.log(user);
 </NavLink></li>
   </>
 const handlerSigOut=()=>{
-logout().then((result) => {
-  console.log(result);
+logout().then(() => {
+  
+  
 })
-// .catch((err) => {
-//   console.log(err);
-// });
+
 }
 
     return (   
@@ -61,7 +60,7 @@ logout().then((result) => {
       <NavLink to="/myTask">
         <img
           className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-green-500"
-          src={user?.photoURL|| null}
+          src={user?.photoURL || null}
           alt=''
         />
       </NavLink>

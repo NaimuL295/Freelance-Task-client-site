@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const BrowseTask = () => {
 
 const data=useLoaderData()
-console.log(data);
+
  
     return (
    

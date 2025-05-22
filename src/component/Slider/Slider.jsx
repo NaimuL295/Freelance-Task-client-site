@@ -8,8 +8,6 @@ import { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter'
 
 const Slider = () => {
-
-
  const [dataUl,setData] = useState([]);
 
 
@@ -24,8 +22,8 @@ const Slider = () => {
    fetchData() 
     },[]);
   // console.log(dataUl);
-    const descriptionArray = dataUl.description?.split(' ') || ['No text found'];
-console.log(descriptionArray);
+//     const descriptionArray = dataUl.description?.split(' ') || ['No text found'];
+// console.log(descriptionArray);
 
     return (
         <div>
