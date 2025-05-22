@@ -9,7 +9,7 @@ console.log(data);
     return (
    
  <div>
-<div className="p-8 w-10/12 mx-auto">
+<div className="lg:p-8 lg:w-9/12 mx-auto">
   <table className="table-auto w-full text-left border border-gray-200 shadow-md rounded-xl overflow-hidden">
     <thead className="bg-gray-100 text-gray-700 font-semibold">
       <tr>

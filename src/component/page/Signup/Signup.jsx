@@ -17,6 +17,12 @@ const {createUser,signGoogle,updataUser ,setUser}=use(AuthContext)
 
 console.log(password,email,name,photo);
 
+
+// const  passwordRez =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/
+// if (!passwordRez.test(password)) {
+//   return  toast.error("Password must include at least: one number (0-6), one lowercase letter (a-z), one uppercase letter (A-Z), and be at least 6 characters long.");
+
+// }
 if (!name) {
 			toast.error("Enter Your Name")
 			return
@@ -26,10 +32,28 @@ if (!name) {
 		}if (!email  ) {
 			toast.error("Enter You Email")
 			return
-		}if (!password) {
-			toast.error("Enter Your Password")
-			return
 		}
+  if (password.length < 6) {
+      toast.error(" Length must be at least 6 characters");
+      return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      toast.error(" Must have an Uppercase letter in the password");
+      return;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      toast.error(" Must have a Lowercase letter in the password");
+      return;
+
+    }
+
+
+    // if (!password) {
+		// 	toast.error("Enter Your Password")
+		// 	return
+		// }
  createUser(email,password).
 	then(res=>{
     
@@ -52,18 +76,15 @@ const googleLogin=()=>{
    signGoogle().then(()=>{
      setTimeout(() => {
      navigate("/")
-    toast.success("Sign up successful") 
+    toast.success("Sign up successfully") 
    },1000);
   
    })
     
 }
-
-    
-
     return (
         <div>
-    <div className="card bg-base-100 w-full max-w-4/12 shrink-0 shadow-2xl mx-auto p-6 my-5">
+    <div className="card bg-base-100 w-full lg:max-w-4/12 shrink-0 shadow-2xl mx-auto p-6 my-5">
          <h1 className="text-5xl font-bold">Sign Up now!</h1>
       <form   onSubmit={handlerSignup}  className="card-body">
         <fieldset className="fieldset">
@@ -74,16 +95,12 @@ const googleLogin=()=>{
           <label className="label">Email</label>
           <input type="email"   name='email' className="input  w-full  " placeholder="Email"     />
           <label className="label">Password</label>
-          <input type="password"
-    name="password"
+          <input type="password" name="password"
     autoComplete="current-password"
     placeholder="Enter your password"
-    //     minLength="6"
-    //  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
-     
-  aria-required="true"
-      title="Must include  least:  One number (0-9) One lowercase letter (a-z)One uppercase letter (A-Z) Minimum 6 characters"
-         className="input w-full"    required/>
+        minLength="6"
+   //   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
+  aria-required="true"  className="input w-full"    required/>
 
           <button type='submit'   className="btn btn-neutral mt-4"> Sign up</button><ToastContainer></ToastContainer>
              <Link to="/login">   <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account? <span className='text-amber-600'>log in</span></p>  </Link>

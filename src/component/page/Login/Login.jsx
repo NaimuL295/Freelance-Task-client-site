@@ -17,10 +17,21 @@ const Login = () => {
 if (!email) {
     toast.error("Enter You Email")
     return
-}if (!password) {
-    toast.error("Enter Your Password")
-    return
-}
+} if (password.length < 6) {
+      toast.error(" Length must be at least 6 characters");
+      return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      toast.error(" Must have an Uppercase letter in the password");
+      return;
+    }
+
+    if (!/[a-z]/.test(password)) {
+      toast.error(" Must have a Lowercase letter in the password");
+      return;
+
+    }
 
 signinUser(email,password).then((result) => {
     console.log(result);
@@ -43,7 +54,7 @@ const googleLogin=()=>{
     return (
       
      <div>
-    <div className="card bg-base-100 w-full max-w-2/6 shrink-0 shadow-2xl mx-auto  p-5 my-5">
+    <div className="card bg-base-100 w-full lg:max-w-2/6  shadow-2xl mx-auto  p-5 my-5">
         <h1 className="text-4xl font-bold">Log in now!</h1>
       <div className="card-body ">
         <form  onSubmit={handlerLogin}    className="fieldset space-y-3">

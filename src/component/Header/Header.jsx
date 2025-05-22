@@ -66,14 +66,11 @@ logout().then((result) => {
         />
       </NavLink>
     </div>
-    <div className='flex flex-col '>
+    <div className='flex lg:flex-col '>
 
       <h3 className="absolute top-[30px] left-0 right-0 text-center text-sm font-semibold text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       {user?.displayName ||"User Name"}
     </h3>
-    <h3 className="absolute top-[30px] left-0 right-0 text-center text-sm font-semibold text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      {user?.email ||"User Name"}
-    </h3>  
     </div>
   </div>
 ) : (

@@ -7,6 +7,7 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 const MyTask = () => {
   const {user}=use(AuthContext)
   const [newUser,setUser]=useState([])
+  const [isTrue, setTrue]=useState(false)
 useEffect(() => {
   if (!user?.email) return; 
 
@@ -58,6 +59,11 @@ console.log(id);
 });
 
     }
+
+
+
+
+
     return (
 
   <div className="w-11/12 mx-auto mt-10">
@@ -68,8 +74,7 @@ console.log(id);
             <th className="p-2">Title</th>
             <th className="p-2">Category</th>
             <th className="p-2">Budget</th>
-            <th className="p-2">Deadline</th>
-            <th className="p-2">Actions</th>
+            <th className="p-2">Deadline</th>      
           </tr>
         </thead>
         <tbody>
@@ -79,31 +84,18 @@ console.log(id);
               <td className="p-2">{newUser.category}</td>
               <td className="p-2">${newUser.budget}</td>
               <td className="p-2">{newUser.day}</td>
-              <td className="p-2">{newUser.email}</td>
               <td className="p-2 space-x-2">
                 <Link to={`/update/${newUser._id}`}>   
-                <button
-             
-                  className="btn"
-                >
-                  Update
-
-<FaUserEdit></FaUserEdit>
+                <button className="btn">Update<FaUserEdit></FaUserEdit>
 
 
                 </button> </Link>
-                <button 
-                  onClick={() => handleDelete(newUser._id)}
-                  className="btn text-red-500"
-                >
+                <button onClick={() => handleDelete(newUser._id)}
+                  className="btn text-red-500">
                <RiDeleteBin2Line size={24} /> 
                 </button>
-                <button
-                  // onClick={() => handleViewBids(newUser._id)}
-                  className="bg-green-500 text-white px-2 py-1 rounded"
-                >
-                  Bids
-                </button>
+               <button   onClick={()=>setTrue(!isTrue)} className="bg-green-500 text-white px-2 py-1 rounded"> Bids
+                   </button>  <span className={`${isTrue ? "text-xl" :"hidden"}`}>{newUser.bidsCount}</span>
               </td>
             </tr>
           ))}
