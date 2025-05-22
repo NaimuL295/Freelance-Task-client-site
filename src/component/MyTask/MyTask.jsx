@@ -4,10 +4,12 @@ import { AuthContext } from '../context/AuthContext/AuthContext';
 import Swal from 'sweetalert2'
 import { FaUserEdit } from "react-icons/fa";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import Spinner from '../Spinner/Spinner';
 const MyTask = () => {
   const {user}=use(AuthContext)
   const [newUser,setUser]=useState([])
-  const [isTrue, setTrue]=useState(false)
+
+
 useEffect(() => {
   if (!user?.email) return; 
 
@@ -16,13 +18,13 @@ useEffect(() => {
     .then((data) => {
       console.log(data);
       setUser(data);
+   
+
     })
     .catch((err) => {
       console.error("Error fetching user tasks:", err);
     });
 }, [user?.email]);
-console.log(newUser._id);
-
 
     const handleDelete=(id)=>{
 
@@ -62,19 +64,16 @@ console.log(id);
 
 
 
-
-
-    return (
-
-  <div className="w-11/12 mx-auto mt-10">
-      <h2 className="text-2xl font-bold mb-4">My Posted </h2>
+return(
+   <div className="w-11/12 mx-auto mt-10">
+      <h2 className="text-2xl font-bold mb-4">My Posted</h2>
       <table className="w-full table-auto border border-gray-300 text-left">
         <thead className="bg-gray-100">
           <tr>
             <th className="p-2">Title</th>
             <th className="p-2">Category</th>
             <th className="p-2">Budget</th>
-            <th className="p-2">Deadline</th>      
+            <th className="p-2">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -83,28 +82,31 @@ console.log(id);
               <td className="p-2">{newUser.title}</td>
               <td className="p-2">{newUser.category}</td>
               <td className="p-2">${newUser.budget}</td>
-              <td className="p-2">{newUser.day}</td>
               <td className="p-2 space-x-2">
-                <Link to={`/update/${newUser._id}`}>   
-                <button className="btn">Update<FaUserEdit></FaUserEdit>
-
-
-                </button> </Link>
-                <button onClick={() => handleDelete(newUser._id)}
-                  className="btn text-red-500">
-               <RiDeleteBin2Line size={24} /> 
+                <Link to={`/update/${newUser._id}`}>
+                  <button className="btn">Update <FaUserEdit /></button>
+                </Link>
+                <button
+                  onClick={() => handleDelete(newUser._id)}
+                  className="btn text-red-500"
+                >
+                  <RiDeleteBin2Line size={24} />
                 </button>
-               <button   onClick={()=>setTrue(!isTrue)} className="bg-green-500 text-white px-2 py-1 rounded"> Bids
-                   </button>  <span className={`${isTrue ? "text-xl" :"hidden"}`}>{newUser.bidsCount}</span>
+
+                <button
+                 // onClick={() => setTrue(!isTrue)}
+                  className="bg-green-500 text-white px-2 py-1 rounded"
+                >
+                  Bids
+                </button>
+                {/* className={`${isTrue ? "text-xl" :"hidden"}`} */}
+<span >{newUser.bidsCount}</span>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-
-
-    );
-};
-
+)
+}
 export default MyTask;
