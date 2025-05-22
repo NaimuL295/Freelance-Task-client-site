@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const FeaturedTasks = () => {
      const [tasks, setTasks] = useState([]);
       useEffect(() => {
-    fetch('http://localhost:3000/featured-tasks')
+    fetch('https://assignment-10-server-side-blond.vercel.app/featured-tasks')
       .then(res => res.json())
       .then(data => setTasks(data));
   }, []);

@@ -23,7 +23,7 @@ console.log(data)
  const userData={...formDataObj,day}
 console.log('Updated formObject:', userData);
 
-fetch(`http://localhost:3000/tasks/${data._id}`,{
+fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
    method: 'PUT',
   headers: {
     'Content-Type': 'application/json'

@@ -98,7 +98,7 @@ const googleLogin=()=>{
           <input type="password" name="password"
     autoComplete="current-password"
     placeholder="Enter your password"
-        minLength="6"
+     
    //   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
   aria-required="true"  className="input w-full"    required/>
 

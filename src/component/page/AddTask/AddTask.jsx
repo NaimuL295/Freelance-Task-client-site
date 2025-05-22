@@ -26,7 +26,7 @@ console.log('Updated formObject:', userData);
 if (!userData) {
    return toast.error("Enter Details")
 }
-fetch("http://localhost:3000/task",{
+fetch("https://assignment-10-server-side-blond.vercel.app/task",{
      method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -33,7 +33,7 @@ logout().then((result) => {
 }
 
     return (   
-      <div className="navbar bg-base-100 shadow-sm px-6 py-4 text-base">
+      <div className="navbar bg-base-100 shadow-sm px-6 py-4 text-xl">
       <div className="navbar-start">
       <li className=' list-none lg:flex max-sm:hidden  font-bold'><img  className='w-40 bg-center bg-cover' src={logo} alt='' /></li>
         <div className=" lg:hidden  md:hidden dropdown">
@@ -82,10 +82,10 @@ logout().then((result) => {
 
 
 
-    {user? <button onClick={handlerSigOut} className="btn bg-green-500  text-white ">  Log out </button>: 
-        <button className="btn bg-green-500  text-white  "><Link to="/login">Login</Link>      </button>}
+    {user? <button onClick={handlerSigOut} className="btn bg-green-500 text-xl  text-white ">  Log out </button>: 
+        <button className="btn bg-green-500  text-white text-xl "><Link to="/login">Login</Link>      </button>}
      
-     {user? "" :<Link to="/signup"><button className="btn bg-green-500  text-white "> Sign up</button> </Link>  }
+     {user? "" :<Link to="/signup"><button className="btn bg-green-500  text-xl text-white ">Signup</button> </Link>  }
 
       </div>
     </div>

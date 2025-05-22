@@ -25,19 +25,19 @@ import MYPostUpdate from "../../MyPostUpdate/MYPostUpdate";
   {path:"/addTask",element:<ProtectRouter> <AddTask></AddTask></ProtectRouter>
      },
   {path:"/browseTask",
-    loader:()=>fetch("http://localhost:3000/tasks"),
+    loader:()=>fetch("https://assignment-10-server-side-blond.vercel.app/tasks"),
     Component:BrowseTask,
     hydrateFallbackElement:<Spinner></Spinner>
   },
 
   {path:"/task/:id",
-    loader:({params})=>fetch(`http://localhost:3000/tasks/${params.id}`),
+    loader:({params})=>fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${params.id}`),
     Component:CartDetails,
   hydrateFallbackElement:<Spinner></Spinner>
   },
    
   {path:"/myTask",element:<ProtectRouter> <MyTask></MyTask>  </ProtectRouter>},
-  {path:"/update/:id",loader:({params})=>fetch(`http://localhost:3000/tasks/${params.id}`),
+  {path:"/update/:id",loader:({params})=>fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${params.id}`),
     Component:MYPostUpdate,
     hydrateFallbackElement:<Spinner></Spinner>
   },

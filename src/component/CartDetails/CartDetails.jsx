@@ -14,7 +14,7 @@ const CartDetails = () => {
     setBidsCount(updatedCount);
     setIsBidding(true);
 
-    fetch(`http://localhost:3000/tasks/${data._id}`, {
+    fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
