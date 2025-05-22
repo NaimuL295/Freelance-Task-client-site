@@ -96,7 +96,7 @@ const googleLogin=()=>{
    //   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
   aria-required="true"  className="input w-full"    required/>
 
-          <button type='submit'   className="btn btn-neutral mt-4"> Sign up</button><ToastContainer></ToastContainer>
+          <button type='submit'   className="btn bg-green-500   btn-neutral mt-4"> Sign up</button><ToastContainer></ToastContainer>
              <Link to="/login">   <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account? <span className='text-amber-600'>log in</span></p>  </Link>
         </fieldset>
 
