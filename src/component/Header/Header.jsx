@@ -28,7 +28,7 @@ const Header = () => {
   } to="/addTask">AddTask
 </NavLink></li>
 
-<li> <Theme></Theme></li>
+<li className='list-none'> <Theme></Theme></li>
   </>
 const handlerSigOut=()=>{
 logout().then(() => {
