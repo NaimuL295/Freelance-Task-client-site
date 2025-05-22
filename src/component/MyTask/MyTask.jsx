@@ -4,7 +4,6 @@ import { AuthContext } from '../context/AuthContext/AuthContext';
 import Swal from 'sweetalert2'
 import { FaUserEdit } from "react-icons/fa";
 import { RiDeleteBin2Line } from "react-icons/ri";
-import Spinner from '../Spinner/Spinner';
 const MyTask = () => {
   const {user}=use(AuthContext)
   const [newUser,setUser]=useState([])
