@@ -24,7 +24,7 @@ if (!email) {
 
 signinUser(email,password).then((result) => {
     console.log(result);
-    
+     navigate("/")
 }).catch((err) => {
     console.log(err);
     

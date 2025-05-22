@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext/AuthContext';
 
   
 const Signup = () => {
-const {createUser,signGoogle,Update ,setUser}=use(AuthContext)
+const {createUser,signGoogle,updataUser ,setUser}=use(AuthContext)
   const navigate=useNavigate()
     const handlerSignup=(e)=>{
         e.preventDefault();
@@ -33,13 +33,13 @@ if (!name) {
  createUser(email,password).
 	then(res=>{
     
-		const user=res.user
-		Update({  displayName:name,photoURL:photo}).then(() => {
+		const user=res.user;
+		updataUser({ displayName:name,photoURL:photo}).then(() => {
 		   setUser({...user,displayName:name,photoURL:photo})
 		
 		}).catch((error) => {
 		  console.log(error);
-		   setUser(user)
+		 //  setUser(user)
 		})
 	  })
 
@@ -52,6 +52,7 @@ const googleLogin=()=>{
    signGoogle().then(()=>{
      setTimeout(() => {
      navigate("/")
+    toast.success("Sign up successful") 
    },1000);
   
    })
