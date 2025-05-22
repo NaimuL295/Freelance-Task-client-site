@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../../Hero/Hero';
+import FeaturedTasks from '../../FeaturedTasks/FeaturedTasks';
 
 const Home = () => {
     return (
@@ -8,6 +9,10 @@ const Home = () => {
 
 
      <Hero/>
+
+
+<section> <FeaturedTasks/>  </section>
+
 <section className="bg-white py-10">
   <h2 className="text-2xl font-bold text-center mb-6">🛠 How It Works</h2>
   <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">

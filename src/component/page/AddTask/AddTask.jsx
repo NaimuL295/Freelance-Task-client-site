@@ -19,7 +19,8 @@ const {user}=use(AuthContext)
   const formData = new FormData(form);
   const  formDataObj= Object.fromEntries(formData.entries());
  const day= startDate.toISOString().split('T')[0]
- const userData={...formDataObj,day,bidsCount}
+ const userData={...formDataObj,day,
+  bidsCount}
 console.log('Updated formObject:', userData);
 
 if (!userData) {

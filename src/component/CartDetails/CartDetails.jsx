@@ -36,13 +36,13 @@ const CartDetails = () => {
         <IoMdArrowBack size={23} />
         <span className="ml-2">Back Home</span>
       </button>
-      <h2 className="text-xl font-semibold mb-4 text-blue-700">
+      <h2 className="text-xl font-semibold mb-4 ">
         You bid for {bidsCount} {bidsCount === 1 ? "opportunity" : "opportunities"}.
       </h2>
       <button
         onClick={handleBid}
         disabled={isBidding}
-        className={`mb-6 px-4 py-2 rounded text-white ${isBidding ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'}`}
+        className={`mb-6 px-4 py-2 rounded text-white ${isBidding ? 'bg-gray-400' : 'bg-green-500'}`}
       >
         {isBidding ? "Bidding..." : "Bids"}
       </button>
@@ -54,7 +54,7 @@ const CartDetails = () => {
         <div><span className="font-semibold">Message:</span> {data.message}</div>
         <div><span className="font-semibold">Budget:</span> ${data.budget}</div>
         <div><span className="font-semibold">Deadline:</span> {data.day}</div>
-        <div><span className="font-semibold">Posted by:</span> {data.name} ({data.email})</div>
+        <div><span className="font-semibold">Posted by:</span> {data.name} </div>
       </div>
     </div>
   );
