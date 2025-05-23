@@ -7,8 +7,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from '../../context/AuthContext/AuthContext';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router';
 const AddTask = () => {
-   
+   const navigate=useNavigate()
 const {user}=use(AuthContext)
     const [startDate, setStartDate] = useState(new Date());
     let bidsCount=0
@@ -39,7 +40,7 @@ Swal.fire({
   icon: "success",
   draggable: true
 });
-
+navigate("/myTask")
 })
 
       }

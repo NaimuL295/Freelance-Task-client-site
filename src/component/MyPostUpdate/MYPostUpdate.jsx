@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 
 
 
 const MYPostUpdate = () => {
 const data=useLoaderData();
-console.log(data)
 
+  const navigate=useNavigate()
     const [startDate, setStartDate] = useState(new Date());
       const handlerUpdate=(e)=>{
        e.preventDefault();
@@ -28,9 +28,9 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
     'Content-Type': 'application/json'
   },
   body: JSON.stringify(userData) 
-}).then((result) =>result.json()).then((data) => {
-
-  console.log(data);
+}).then((result) =>result.json()).then(() => {
+navigate("/myTask")
+ // console.log(data);
   
 })
 
@@ -40,7 +40,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
         <div>
    
            <div className="max-w-xl mx-auto  p-6 rounded-2xl shadow-md">
-             <h2 className="text-2xl font-bold mb-4 text-center">Post a Task</h2>
+             <h2 className="text-2xl font-bold mb-4 text-center">My   Task Update</h2>
              <form onSubmit={handlerUpdate}   className="space-y-4">
                <div>
        
@@ -57,13 +57,14 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
              />
            </div>
        
-                 <label className="block font-medium mb-1">Category</label>
+                 <label className="block   font-medium mb-1">Category</label>
          <select defaultValue={data.category}>
-  <option value="">Select a category</option>
-  <option value="web">Web Development</option>
-  <option value="design">Design</option>
-  <option value="writing">Writing</option>
-  <option value="marketing">Marketing</option>
+  <option  className='dark:text-gray-800' value="">Select a category</option>
+  <option className='dark:text-gray-800' value="web">Web Development</option>
+  <option  className='dark:text-gray-800' value="design">Design</option>
+  <option  className='dark:text-gray-800' value="writing">Writing</option>
+  <option  className='dark:text-gray-800' value="marketing">Marketing</option>
+    <option    className='dark:text-gray-800'   value="Data Entry">Data Entry</option>
 </select>
 
 
