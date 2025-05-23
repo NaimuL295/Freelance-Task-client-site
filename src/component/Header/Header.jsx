@@ -66,7 +66,7 @@ logout().then(() => {
     <div className="w-9 rounded-full  ">
       <NavLink to="/myTask">
         <img
-          className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-green-500"
+          className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-gray-800 "
           src={user?.photoURL || null}
           alt=''
         />
@@ -84,10 +84,10 @@ logout().then(() => {
 )}
 
 
-    {user? <button onClick={handlerSigOut} className="btn bg-green-500 text-base  text-white ">  Log out </button>: 
-        <button className="btn bg-green-500  text-white text-base "><Link to="/login">Login</Link>      </button>}
+    {user? <button onClick={handlerSigOut} className="btn bg-gray-800  text-base  text-white ">  Log out </button>: 
+        <button className="btn bg-gray-800   text-white text-base "><Link to="/login">Login</Link>      </button>}
      
-     {user? "" :<Link to="/signup"><button className="btn bg-green-500  text-base text-white ">Signup</button> </Link>  }
+     {user? "" :<Link to="/signup"><button className="btn bg-gray-800   text-base text-white ">Signup</button> </Link>  }
 
       </div>
     </div>

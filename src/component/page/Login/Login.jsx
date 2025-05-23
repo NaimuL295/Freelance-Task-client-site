@@ -28,7 +28,7 @@ if (!email) {
     }
 
     if (!/[a-z]/.test(password)) {
-      toast.error(" Must have a Lowercase letter in the password");
+      toast.error("Must have a Lowercase letter in the password");
       return;
 
     }
@@ -67,7 +67,7 @@ const googleLogin=()=>{
           
           className="input w-full " placeholder="Password" required />
           <div><a className="link link-hover">Forgot password?</a>  <ToastContainer />     </div>
-          <button type='submit'   className="btn bg-green-500   btn-neutral mt-4">Log in      </button>
+          <button type='submit'   className="btn bg-gray-800    btn-neutral mt-4">Log in      </button>
 
      <Link to="/signup">     <p className="text-xs text-center sm:px-6 dark:text-gray-600">Don't have an account?<span className="text-amber-600">Sign up now</span>  </p></Link>
       <button   onClick={googleLogin}    className="btn bg-white text-black border-[#e5e5e5]">

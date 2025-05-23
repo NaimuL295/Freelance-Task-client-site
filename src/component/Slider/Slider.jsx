@@ -77,7 +77,7 @@ const Slider = () => {
                 {ui.description} 
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-green-500 text-white py-2 px-6 rounded-lg text-sm sm:text-base font-medium transition-colors duration-300 shadow-md">
+                <button className="bg-gray-800  text-white py-2 px-6 rounded-lg text-sm sm:text-base font-medium transition-colors duration-300 shadow-md">
                   Get Started
                 </button>
               </div>

@@ -15,7 +15,7 @@ function TrustedSection() {
         <p className="text-gray-600 ">Rated Freelancers</p>
       </div>
       <div className="border border-gray-200  p-6 rounded-lg text-center">
-        <h3 className="text-2xl font-bold text-green-600 dark:text-green-400">$150M+</h3>
+        <h3 className="text-2xl font-bold text-gray-800  dark:text-gray-800 ">$150M+</h3>
         <p className="text-gray-600 ">Freelancer Earnings</p>
       </div>
       <div className="border border-gray-200  p-6 rounded-lg text-center">

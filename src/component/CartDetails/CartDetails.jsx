@@ -30,7 +30,7 @@ const CartDetails = () => {
   return (
     <div className="p-8 w-10/12 mx-auto">
       <button
-        className="flex items-center btn bg-green-500 text-white mb-4"
+        className="flex items-center btn bg-gray-800  text-white mb-4"
         onClick={() => navigate("/")}
       >
         <IoMdArrowBack size={23} />
@@ -42,7 +42,7 @@ const CartDetails = () => {
       <button
         onClick={handleBid}
         disabled={isBidding}
-        className={`mb-6 px-4 py-2 rounded text-white ${isBidding ? 'bg-gray-400' : 'bg-green-500'}`}
+        className={`mb-6 px-4 py-2 rounded text-white ${isBidding ? 'bg-gray-400' : 'bg-gray-800 '}`}
       >
         {isBidding ? "Bidding..." : "Bids"}
       </button>

@@ -14,7 +14,7 @@ const FeaturedTasks = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {tasks.map(task => (
           <div key={task._id} className="bg-white p-5 rounded shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-green-500">{task.title}</h3>
+            <h3 className="text-xl font-bold text-gray-800 ">{task.title}</h3>
             <p className="text-gray-600">🗂 Category: {task.category}</p>
             <p className="text-gray-600">💰 Budget: ${task.budget}</p>
             <p className="text-gray-600">📅 Deadline: {task.day}</p>

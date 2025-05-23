@@ -1,13 +1,14 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
 import { useNavigate } from 'react-router';
-
+import { CiUnread } from "react-icons/ci";
   import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../../context/AuthContext/AuthContext';
-
+import { CiRead } from "react-icons/ci";
   
 const Signup = () => {
-const {createUser,signGoogle,updateUser ,setUser}=use(AuthContext)
+const {createUser,signGoogle,updateUser ,setUser}=use(AuthContext);
+const [Toggle,setToggle]=useState(false)
   const navigate=useNavigate()
     const handlerSignup=(e)=>{
         e.preventDefault();
@@ -42,8 +43,6 @@ if (!name) {
       return;
 
     }
-
-
     // if (!password) {
 		// 	toast.error("Enter Your Password")
 		// 	return
@@ -57,7 +56,7 @@ if (!name) {
 		
 		}).catch((error) => {
 		  console.log(error);
-		   setUser(user)
+		 //  setUser(user)
 		})
 	  })
 	//   .catch((err) => {console.log(err);});
@@ -89,14 +88,17 @@ const googleLogin=()=>{
           <label className="label">Email</label>
           <input type="email"   name='email' className="input  w-full  " placeholder="Email"     />
           <label className="label">Password</label>
-          <input type="password" name="password"
+          <div className='relative '>
+<input type={Toggle? "text":"password"   } name="password"
     autoComplete="current-password"
     placeholder="Enter your password"
      
    //   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
   aria-required="true"  className="input w-full"    required/>
-
-          <button type='submit'   className="btn bg-green-500   btn-neutral mt-4"> Sign up</button><ToastContainer></ToastContainer>
+<div  disabled onClick={()=>setToggle(!Toggle)}  className='absolute z-50 right-4 top-3'>  { Toggle?<CiRead  size={25}/>  : <CiUnread size={24} />   } </div>
+{/* <CiRead  size={25}/>  <CiUnread size={24}  /> */}
+          </div>
+          <button type='submit'   className="btn bg-gray-800   btn-neutral mt-4"> Sign up</button><ToastContainer></ToastContainer>
              <Link to="/login">   <p className="text-xs text-center sm:px-6 dark:text-gray-600">Already have an account? <span className='text-amber-600'>log in</span></p>  </Link>
         </fieldset>
 

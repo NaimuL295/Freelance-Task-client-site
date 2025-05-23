@@ -124,7 +124,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
                {/* Submit Button */}
                <button
                  type="submit"
-                 className="w-full bg-green-500 text-white py-2 px-4 rounded-xl hover:bg-green-500 transition duration-200"
+                 className="w-full bg-gray-800  text-white py-2 px-4 rounded-xl hover:bg-gray-800 transition duration-200"
                >
                  Submit Task
                </button>

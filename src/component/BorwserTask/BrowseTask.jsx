@@ -29,7 +29,7 @@ const data=useLoaderData()
           <td className="px-4 py-2">
             <Link
               to={`/task/${task._id}`}
-              className="text-green-500 text-sm font-medium hover:underline"
+              className="text-gray-800  text-sm font-medium hover:underline"
             >
               See Details
             </Link>
