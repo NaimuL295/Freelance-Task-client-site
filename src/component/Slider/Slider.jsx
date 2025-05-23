@@ -74,7 +74,7 @@ const Slider = () => {
                 />
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-white/90 mb-5 sm:mb-6">
-                {ui.description} 
+                {ui.title} 
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <button className="bg-gray-800  text-white py-2 px-6 rounded-lg text-sm sm:text-base font-medium transition-colors duration-300 shadow-md">
