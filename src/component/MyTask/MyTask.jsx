@@ -68,7 +68,7 @@ return(
       <h2 className="text-2xl font-bold mb-4">My Posted</h2>
       <table className="w-full table-auto border border-gray-300 text-left">
         <thead className="bg-gray-100">
-          <tr>
+          <tr   className='dark:text-black'>
             <th className="p-2">Title</th>
             <th className="p-2">Category</th>
             <th className="p-2">Budget</th>

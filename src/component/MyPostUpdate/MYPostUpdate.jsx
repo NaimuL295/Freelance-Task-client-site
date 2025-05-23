@@ -29,6 +29,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
   },
   body: JSON.stringify(userData) 
 }).then((result) =>result.json()).then((data) => {
+
   console.log(data);
   
 })
@@ -38,7 +39,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
     return (
         <div>
    
-           <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md">
+           <div className="max-w-xl mx-auto  p-6 rounded-2xl shadow-md">
              <h2 className="text-2xl font-bold mb-4 text-center">Post a Task</h2>
              <form onSubmit={handlerUpdate}   className="space-y-4">
                <div>
@@ -93,7 +94,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
                  <input
                    type="number"
                    name='budget'
-                   className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:black"
+                   className="w-full  focus:outline-none focus:ring-2 focus:black"
                    placeholder="Enter your budget" required
                 defaultValue={data.budget}  />
                </div>
@@ -106,7 +107,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
                  type="text"
                 defaultValue={data?.name}
                    readOnly
-                   className="w-full bg-gray-100 border rounded-lg p-2 text-gray-700"
+                   className="w-full  border rounded-lg p-2 text-gray-700"
                  />
                </div>
                <div>
@@ -116,7 +117,7 @@ fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
                   defaultValue={data?.email}
                   name='email'
                    readOnly
-                   className="w-full bg-gray-100 border rounded-lg p-2 text-gray-700"
+                   className="w-full  border rounded-lg p-2 text-gray-700"
                  />
                </div>
        

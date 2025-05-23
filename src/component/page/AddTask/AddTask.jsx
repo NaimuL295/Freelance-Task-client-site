@@ -44,19 +44,18 @@ Swal.fire({
 
       }
   return (
-    <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md">
+    <div className="max-w-xl mx-auto  p-6 rounded-2xl shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-center">Post a Task</h2>
       <form onSubmit={handlerAddTask}   className="space-y-4">
         <div>
 
   <div>
-      <label htmlFor='' className="block font-medium mb-1">Task Title</label>
+      <label htmlFor='' className="block font-medium mb-1 ">Task Title</label>
       <input
         name="title"
         type="text"
         required
-       
-        className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full border bg-gray-100  rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder="Enter task title"
       />
     </div>
@@ -64,7 +63,7 @@ Swal.fire({
           <label htmlFor=''  className="block font-medium mb-1">Category</label>
          <select
   name="category" required
-  className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  className="w-full border bg-gray-100  rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
 >
   <option value="">Select a category </option>
   <option value="web">Web Development</option>
@@ -74,15 +73,15 @@ Swal.fire({
 </select>
         </div>
         <div>
-          <label htmlFor=''  className="block font-medium mb-1">Description</label>
+          <label htmlFor='Description'  className="block font-medium mb-1">Description</label>
           <textarea
             rows="4" name='message' required
-            className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-gray-100  rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="What needs to be done?"
           ></textarea>
         </div>
         <div>
-          <label htmlFor=''  className="block font-medium mb-1">Deadline</label>
+          <label htmlFor='Deadline'  className="block font-medium mb-1">Deadline</label>
           {/* <input
             type="date"  
             className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -91,11 +90,11 @@ Swal.fire({
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Budget</label>
+          <label htmlFor='Budget'  className="block font-medium mb-1">Budget</label>
           <input
             type="number"
             name='budget'
-            className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border bg-gray-100  rounded-lg p-2 text-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter your budget" required
           />
         </div>
