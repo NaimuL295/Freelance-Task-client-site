@@ -35,9 +35,9 @@ function TrustedSection() {
 
 
 {/*  */}
- <section className=" py-5 w-9/12 mx-auto">
-  <h2 className="text-2xl font-bold     text-center mb-6">🛠 How It Works</h2>
-  <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+ <section className=" py-5 w-10/12 mx-auto">
+  <h2 className="text-2xl font-bold     text-center mb-6  rounded-lg  ">🛠 How It Works</h2>
+  <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
     <div className="text-center dark:bg-white">
       <div className="text-4xl mb-2">📝</div>
       <h3 className="font-semibold text-lg dark:text-black  ">Post a Task</h3>
@@ -45,14 +45,14 @@ function TrustedSection() {
         Describe your need and set a budget. Provide clear details to help freelancers understand your requirements.
       </p>
     </div>
-    <div className="text-center dark:bg-white">
+    <div className="text-center dark:bg-white rounded-lg  ">
       <div className="text-4xl mb-2">📬</div>
       <h3 className="font-semibold text-lg dark:text-black   ">Get Bids</h3>
       <p className="text-sm text-gray-600">
         Freelancers send offers based on your task. Review proposals, compare expertise, and ask questions before making a decision.
       </p>
     </div>
-    <div className="text-center dark:bg-white">
+    <div className="text-center dark:bg-white rounded-lg  ">
       <div className="text-4xl mb-2">💼</div>
       <h3 className="font-semibold  dark:text-black   text-lg">Hire & Work</h3>
       <p className="text-sm text-gray-600">
