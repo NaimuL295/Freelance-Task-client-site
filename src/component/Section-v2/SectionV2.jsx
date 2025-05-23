@@ -9,22 +9,22 @@ function TrustedSection() {
     <h2 className="text-4xl font-bold text-center mb-12     ">
       Platform Statistics
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6   ">
       <div className="border border-gray-200  p-6 rounded-lg text-center">
-        <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">3M+</h3>
-        <p className="text-gray-600 ">Rated Freelancers</p>
+        <h3 className="text-2xl    font-bold text-blue-600 dark:text-blue-400">3M+</h3>
+        <p className=" ">Rated Freelancers</p>
       </div>
-      <div className="border border-gray-200  p-6 rounded-lg text-center">
-        <h3 className="text-2xl font-bold text-gray-800  dark:text-gray-800 ">$150M+</h3>
-        <p className="text-gray-600 ">Freelancer Earnings</p>
+      <div className="border border-gray-200  p-6 rounded-lg text-center ">
+        <h3 className="text-2xl font-bold  dark:text-emerald-900">$150M+</h3>
+        <p className=" ">Freelancer Earnings</p>
       </div>
       <div className="border border-gray-200  p-6 rounded-lg text-center">
         <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">10 mins</h3>
-        <p className="text-gray-600 ">Average Hiring Time</p>
+        <p className=" ">Average Hiring Time</p>
       </div>
       <div className="border border-gray-200  p-6 rounded-lg text-center">
         <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">120+</h3>
-        <p className="text-gray-600 ">Countries Served</p>
+        <p className=" ">Countries Served</p>
       </div>
     </div>
   </div>
