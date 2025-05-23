@@ -8,7 +8,6 @@ const Home = () => {
         <div>
      <Hero/>
 
-
 <section> <FeaturedTasks/>  </section>
 
 <SectionV2/>

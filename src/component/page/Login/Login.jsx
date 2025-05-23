@@ -14,7 +14,6 @@ const Login = () => {
       const {email,password}=Object.fromEntries(fromData.entries())
         console.log(email,password);
 
-
 if (!email) {
     toast.error("Enter You Email")
     return
@@ -34,17 +33,17 @@ if (!email) {
 
     }
 
-signinUser(email,password).then((result) => {
-    console.log(result);
-     navigate("/")
+signinUser(email,password).then(()=>{
+navigate("/")
 }).catch((error) => { setError(error);
+console.log(error);
 
-       if (err.code ==="auth/email-already-in-use") {
+       if (err.code==="auth/email-already-in-use") {
           toast.error("This email is already in use.");
-          if (err.code==="auth/invalid-email") {
+         } if(err.code==="auth/invalid-email") {
            toast.error("Invalid email address.");
           }
-       }});
+        });
     }
 
 
@@ -69,8 +68,7 @@ const googleLogin=()=>{
           
           <label className="label">Password</label>
           <input type="password" name='password' 
-          
-          className="input w-full " placeholder="Password" required />
+           className="input w-full " placeholder="Password"autoComplete="current-password" required />
           <div><a className="link link-hover">Forgot password?</a>  <ToastContainer />     </div>
           <button type='submit'   className="btn bg-gray-800    btn-neutral mt-4">Log in      </button>
   </form>

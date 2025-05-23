@@ -49,7 +49,7 @@ const CartDetails = () => {
       <h2 className="text-2xl font-bold mb-4 border-b border-gray-300 pb-2">
         {data.title}
       </h2>
-      <div className="space-y-2 text-gray-700">
+      <div className="space-y-2 ">
         <div><span className="font-semibold">Category:</span> {data.category}</div>
         <div><span className="font-semibold">Message:</span> {data.message}</div>
         <div><span className="font-semibold">Budget:</span> ${data.budget}</div>

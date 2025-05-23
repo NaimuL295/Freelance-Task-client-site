@@ -4,10 +4,7 @@ import { Link } from 'react-router';
 const BrowseTask = () => {
 
 const data=useLoaderData()
-
- 
     return (
-   
  <div>
 <div className="lg:p-8 lg:w-9/12 mx-auto">
   <table className="table-auto w-full text-left border border-gray-200 shadow-md rounded-xl overflow-hidden">
@@ -29,8 +26,7 @@ const data=useLoaderData()
           <td className="px-4 py-2">
             <Link
               to={`/task/${task._id}`}
-              className="text-gray-800  text-sm font-medium hover:underline"
-            >
+              className="  text-sm font-medium hover:underline">
               See Details
             </Link>
           </td>
@@ -39,21 +35,7 @@ const data=useLoaderData()
     </tbody>
   </table>
 </div>
-
-
-
     </div>
-
-  
-
- 
-
-
-
-
-
-   
-
 
 
 

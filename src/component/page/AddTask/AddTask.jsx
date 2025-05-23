@@ -70,6 +70,7 @@ Swal.fire({
   <option value="design">Design</option>
   <option value="writing">Writing</option>
   <option value="marketing">Marketing</option>
+  <option value="Data Entry">Data Entry</option>
 </select>
         </div>
         <div>
