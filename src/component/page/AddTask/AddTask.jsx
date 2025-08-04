@@ -27,7 +27,7 @@ const {user}=use(AuthContext)
 if (!userData) {
    return toast.error("Enter Details")
 }
-fetch("https://assignment-10-server-side-blond.vercel.app/task",{
+fetch("https://assignment-10-server-side-beta-three.vercel.app/task",{
      method: 'POST',
       headers: {
         'Content-Type': 'application/json'

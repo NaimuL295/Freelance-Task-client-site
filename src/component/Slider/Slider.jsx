@@ -14,7 +14,7 @@ const Slider = () => {
     useEffect(()=>{
     const fetchData = async () => {
       
-       const response = await fetch("https://assignment-10-server-side-blond.vercel.app/slider");
+       const response = await fetch("https://assignment-10-server-side-beta-three.vercel.app/slider");
       
         const data = await response.json();
       setData(data)

@@ -22,7 +22,7 @@ const data=useLoaderData();
  const userData={...formDataObj,day}
 //console.log('Updated formObject:', userData);
 
-fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${data._id}`,{
+fetch(`https://assignment-10-server-side-beta-three.vercel.app/tasks/${data._id}`,{
    method: 'PUT',
   headers: {
     'Content-Type': 'application/json'

@@ -12,13 +12,12 @@ const MyTask = () => {
 useEffect(() => {
   if (!user?.email) return; 
 
-  fetch(`https://assignment-10-server-side-blond.vercel.app/tasks?emailParams=${user.email}`)
+  fetch(`https://assignment-10-server-side-beta-three.vercel.app/tasks?emailParams=${user.email}`)
     .then((result) => result.json())
     .then((data) => {
     //  console.log(data);
       setUser(data);
    
-
     })
     .catch(() => {
     //  console.error("Error fetching user tasks:", err);
@@ -37,7 +36,7 @@ Swal.fire({
   confirmButtonText: "Yes, delete it!"
 }).then((result) => {
   if (result.isConfirmed) {
-  fetch(`https://assignment-10-server-side-blond.vercel.app/tasks/${id}`,{
+  fetch(`https://assignment-10-server-side-beta-three.vercel.app/tasks/${id}`,{
  method:'DELETE',
  headers: {
         'Content-Type': 'application/json'
