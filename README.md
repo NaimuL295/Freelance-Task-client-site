@@ -27,15 +27,36 @@ A modern platform connecting freelancers with clients, featuring task management
 Live site URL: https://assignment-10-b11.netlify.app/
 
 ![App Screenshot](https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png)
-✨ Features
-🔐 Firebase-powered authentication
+## 🌟 Features
 
-📅 Task scheduling with React Datepicker
+- **User Authentication**: Secure signup/login with Firebase
+- **Task Management**: Create, assign, and track freelance tasks
+- **Responsive UI**: Mobile-friendly design with TailwindCSS
+- **Interactive Components**: 
+  - Date picker for task deadlines
+  - Animated text effects
+  - Toast notifications
+- **Swiper Carousel**: For showcasing featured projects
 
-✍️ Animated text with React Simple Typewriter
+## 🚀 Live Demo
 
-🎛️ Interactive UI with Swiper & DaisyUI components
+[View Live Site](https://freelance-task-client.vercel.app) *(Replace with your actual URL)*
 
-💬 Toast notifications with React Toastify
+## 🛠 Tech Stack
 
-📱 Fully responsive design
+### Frontend
+- Framework**: React 19 + Vite
+- Styling**: TailwindCSS + DaisyUI
+- State Management**: React hooks
+- Routing**: React Router v7
+-ui
+  - React Icons
+  - React Datepicker
+  - Swiper.js
+  - SweetAlert2
+
+ Backend Services
+- **Authentication**: Firebase Auth
+- **Database**: Firebase Firestore (if used)
+
+ 
