@@ -26,30 +26,4 @@ A modern platform connecting freelancers with clients, featuring task management
 🌐 Live Demo
 Live site URL: https://assignment-10-b11.netlify.app/
 
-🛠️ Tech Stack
-Frontend
-Framework: React 19 + Vite
-
-Styling: TailwindCSS + DaisyUI
-
-State: TanStack Query (React Query)
-
-Routing: React Router v7
-
-Forms: React Hook Form
-UI: React Icons, React Select, SweetAlert2
-Backend (if applicable)
-Auth: Firebase
-
-
-
-✨ Key Features
-Task Management: Create, assign, and track freelance tasks
-
-Secure Payments: Stripe integration for transactions
-
-Real-time Chat: Firebase-powered messaging
-
-Responsive Design: Mobile-first approach
-
-Analytics: Recharts for task statistics
+![App Screenshot](https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png)
