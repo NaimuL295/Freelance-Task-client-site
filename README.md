@@ -27,3 +27,15 @@ A modern platform connecting freelancers with clients, featuring task management
 Live site URL: https://assignment-10-b11.netlify.app/
 
 ![App Screenshot](https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png)
+✨ Features
+🔐 Firebase-powered authentication
+
+📅 Task scheduling with React Datepicker
+
+✍️ Animated text with React Simple Typewriter
+
+🎛️ Interactive UI with Swiper & DaisyUI components
+
+💬 Toast notifications with React Toastify
+
+📱 Fully responsive design
