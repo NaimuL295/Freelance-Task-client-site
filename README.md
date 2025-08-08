@@ -10,12 +10,46 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
+Freelance Task Platform
 Website name:WAXWINX
-Live site URL: https://assignment-10-b11.netlify.app/
+
  1:User Authentication.
- 2:Task Management: Clients can post tasks with detailed descriptions, budgets, and deadlines, while freelancers can browse available tasks and apply to those that match their skills.
+
  3:Responsive Design.
  4:Dark Mode Support.
 5:Real-time Notifications.
 
+
+https://i.ibb.co/bgGn6JKP/Screenshot-2025-08-08-170354.png
+A modern platform connecting freelancers with clients, featuring task management, payments, and real-time communication.
+
+🌐 Live Demo
+Live site URL: https://assignment-10-b11.netlify.app/
+
+🛠️ Tech Stack
+Frontend
+Framework: React 19 + Vite
+
+Styling: TailwindCSS + DaisyUI
+
+State: TanStack Query (React Query)
+
+Routing: React Router v7
+
+Forms: React Hook Form
+UI: React Icons, React Select, SweetAlert2
+Backend (if applicable)
+Auth: Firebase
+
+
+
+✨ Key Features
+Task Management: Create, assign, and track freelance tasks
+
+Secure Payments: Stripe integration for transactions
+
+Real-time Chat: Firebase-powered messaging
+
+Responsive Design: Mobile-first approach
+
+Analytics: Recharts for task statistics
