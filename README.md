@@ -26,7 +26,7 @@ A modern platform connecting freelancers with clients, featuring task management
 🌐 Live Demo
 Live site URL: https://assignment-10-b11.netlify.app/
 ![App Screenshot](https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png)
-## 🌟 Features
+ 🌟 Features
 
 - **User Authentication**: Secure signup/login with Firebase
 - **Task Management**: Create, assign, and track freelance tasks
@@ -37,12 +37,7 @@ Live site URL: https://assignment-10-b11.netlify.app/
   - Toast notifications
 - **Swiper Carousel**: For showcasing featured projects
 
-https://i.ibb.co/LdSb1bsR/Screenshot-2025-08-08-170713.png
-
-
-## 🛠 Tech Stack
-
-### Frontend
+ Frontend
 - Framework**: React 19 + Vite
 - Styling**: TailwindCSS + DaisyUI
 - State Management**: React hooks
